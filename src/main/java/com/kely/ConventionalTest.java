@@ -2,10 +2,8 @@ package com.kely;
 
 import com.kely.entity.T;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Set;
+import java.math.BigDecimal;
+import java.util.*;
 
 public class ConventionalTest {
     public static void main(String[] args) {
@@ -54,6 +52,9 @@ public class ConventionalTest {
 //        });
 //        t1.start();
 
+        BigDecimal bd =new BigDecimal(12.999000);//定义一个BigDecimal 类型
+        int b=bd.intValue();//转换为int类型
+        System.out.println(b);//b=1231;输出结果
 
     }
 
