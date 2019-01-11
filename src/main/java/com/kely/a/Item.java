@@ -1,4 +1,4 @@
-package com.kely;
+package com.kely.a;
 
 import java.io.Serializable;
 import java.util.List;

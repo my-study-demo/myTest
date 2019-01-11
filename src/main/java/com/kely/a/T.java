@@ -1,4 +1,4 @@
-package com.kely.entity;
+package com.kely.a;
 
 public class T {
     private int second;
