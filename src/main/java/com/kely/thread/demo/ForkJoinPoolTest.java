@@ -77,13 +77,17 @@ public class ForkJoinPoolTest {
 
         pool.submit(task);
         //等待20s，观察结果
+        //1
 //      pool.awaitTermination(20, TimeUnit.SECONDS);
 //      pool.shutdown();
 
+        //2
 //        while (latch.getCount() > 0){}
 //        pool.shutdown();
 //        System.out.println("下班！");
 
+        //3
+        //线程可以阻塞等待这一数量到达零。
         latch.await();
         System.out.println("下班！");
     }
