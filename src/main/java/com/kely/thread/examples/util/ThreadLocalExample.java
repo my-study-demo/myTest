@@ -1,4 +1,4 @@
-package com.kely.thread.test;
+package com.kely.thread.examples.util;
 
 /**
  * @Description: 线程变量
