@@ -1,4 +1,4 @@
-package com.kely.designPattern.adapter;
+package com.kely.design.pattern.adapter;
 
 /**
  * @Description: 接口1

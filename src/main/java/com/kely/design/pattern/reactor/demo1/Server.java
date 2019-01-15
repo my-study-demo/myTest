@@ -1,4 +1,4 @@
-package com.kely.designPattern.reactor.demo1;
+package com.kely.design.pattern.reactor.demo1;
 
 public class Server {
     Selector selector = new Selector();

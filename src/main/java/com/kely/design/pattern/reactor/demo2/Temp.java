@@ -1,4 +1,4 @@
-package com.kely.designPattern.reactor.demo2;
+package com.kely.design.pattern.reactor.demo2;
 
 /**
  * @Description:
