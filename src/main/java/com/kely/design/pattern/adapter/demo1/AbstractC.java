@@ -1,4 +1,4 @@
-package com.kely.design.pattern.adapter;
+package com.kely.design.pattern.adapter.demo1;
 
 /**
  * @Description: 适配器
