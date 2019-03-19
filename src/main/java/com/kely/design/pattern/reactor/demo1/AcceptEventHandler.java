@@ -1,7 +1,7 @@
 package com.kely.design.pattern.reactor.demo1;
 
 /**
- * @Description: ACCEPT事件处理器
+ * @Description: 继承自EventHandler的具体事件处理器的实现类，一般根据事件不同的状态来定义不同的处理器
  * @Author yangqh
  * @Date 16:18 2019/1/14
  * @Param
