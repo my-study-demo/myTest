@@ -1,7 +1,7 @@
 package com;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * @description:
@@ -9,37 +9,21 @@ import java.util.List;
  * @date: 2018/8/27 9:39
  */
 public class TestA {
-    public static void main(String args[]) {
-        List<String> unchangedList = new ArrayList<String>();
-        List<String> increaseList = new ArrayList<String>();
-        List<String> decreaseList = new ArrayList<String>();
 
-        List<String> specialGroupIdArrayDb = new ArrayList<String>();
-        List<String> specialGroupIdArray = new ArrayList<String>();
-        specialGroupIdArrayDb.add("1");
-        specialGroupIdArrayDb.add("2");
 
-        specialGroupIdArray.add("2");
-        specialGroupIdArray.add("3");
+    static class MyTask extends TimerTask {
 
-        analyseSpecialGroupId(unchangedList, increaseList, decreaseList, specialGroupIdArrayDb, specialGroupIdArray);
-
-        System.out.println(unchangedList);
-        System.out.println(increaseList);
-        System.out.println(decreaseList);
-
+        @Override
+        public void run() {
+            System.out.println("到点");
+        }
     }
 
-    private static void analyseSpecialGroupId(List<String> unchangedList, List<String> increaseList, List<String> decreaseList, List<String> specialGroupIdArrayDb, List<String> specialGroupIdArray) {
-        List<String> specialGroupIdArrayDbTemp1 = new ArrayList<String>();
-        specialGroupIdArrayDbTemp1.addAll(specialGroupIdArrayDb);
-        specialGroupIdArrayDb.retainAll(specialGroupIdArray);
-        unchangedList.addAll(specialGroupIdArrayDb);
-        List<String> specialGroupIdArrayDbTemp2 = new ArrayList<String>();
-        specialGroupIdArrayDbTemp2.addAll(specialGroupIdArrayDbTemp1);
-        specialGroupIdArrayDbTemp1.removeAll(specialGroupIdArray);
-        decreaseList.addAll(specialGroupIdArrayDbTemp1);
-        specialGroupIdArray.removeAll(specialGroupIdArrayDbTemp2);
-        increaseList.addAll(specialGroupIdArray);
+    public static void main(String[] args) {
+        //创建定时器对象
+        Timer t = new Timer();
+        //在3秒后执行MyTask类中的run方法
+        t.schedule(new MyTask(), 3000);
+        System.out.println("");
     }
 }
